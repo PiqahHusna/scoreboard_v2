@@ -1,0 +1,263 @@
+/* 🌐 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+  color: #2c3e50;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* 📑 Sidebar Glass Effect */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 230px;
+  background: rgba(77, 25, 210, 0.07);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px 0;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+  transition: background 0.4s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(6px);
+}
+
+/* 🚪 Logout special */
+.sidebar ul li a.logout {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+/* 🏗️ Main Content */
+.main-content {
+  margin-left: 250px;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+
+.page-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* 📊 Dashboard Cards Minimalis */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* lebih kecil */
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;          /* tak terlalu bulat */
+  padding: 16px 14px;           /* lebih padat */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  min-height: 100px;            /* kecil tapi balance */
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+  font-size: 22px;   /* kecilkan icon */
+  margin-bottom: 6px;
+  color: #1976d2;
+}
+
+.stat-number {
+  font-size: 20px;   /* kecil & kemas */
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 📊 Dashboard Cards Minimalis */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* lebih kecil */
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;          /* tak terlalu bulat */
+  padding: 16px 14px;           /* lebih padat */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  min-height: 100px;            /* kecil tapi balance */
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+  font-size: 22px;   /* kecilkan icon */
+  margin-bottom: 6px;
+  color: #1976d2;
+}
+
+.stat-number {
+  font-size: 20px;   /* kecil & kemas */
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 📑 Table Minimalis */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 14px;    /* kecilkan tulisan */
+}
+
+.table th, .table td {
+  padding: 10px 12px; /* lebih padat */
+  text-align: left;
+}
+
+.table th {
+  background: #1976d2;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background: rgba(230, 242, 255, 0.5);
+}
+
+
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: linear-gradient(135deg, #1c1c1c, #121212);
+  color: #e0e0e0;
+}
+
+body.dark .sidebar {
+  background: rgba(20,20,20,0.9);
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark .stat-card,
+body.dark .table {
+  background: rgba(40,40,40,0.7);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+body.dark .page-header h1 {
+  color: #90caf9;
+}
+
+body.dark .table th {
+  background: #0d47a1;
+}
+
+/* 🔘 Dark Mode Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #1565c0;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 210px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    width: 200px;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
